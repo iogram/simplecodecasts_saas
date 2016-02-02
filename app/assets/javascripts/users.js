@@ -17,7 +17,6 @@ $(document).ready(function() {
         exp_month: expMonth,
         exp_year: expYear
       }, stripeResponseHandler);
-      alert("1");
     }
     return false;
   }); // form submission
@@ -26,7 +25,6 @@ $(document).ready(function() {
     var f = $("#new_user");
     // Get the token from the response:
     var token = response.id;
-    alert(response.id);
     // Add the token to the form:
     f.append('<input type="hidden" name="user[stripe_card_token]" value="' + token + '" />');
     // Submit the form:
