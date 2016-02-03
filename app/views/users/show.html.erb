@@ -1,32 +1,9 @@
-<div class="column">
-    <div class="col-md-6 col-md-offset-3">
-        <div class="well">
-            <div class="form-group">
-            <%= label 'First Name: ' %>
-            <%= @user.profile.first_name.capitalize, class: 'form-control' %></br>
-            </div>
-            <div class="form-group">
-            <%= label 'Last Name: ' %>
-            <%= @user.profile.last_name.capitalize, class: 'form-control' %><br/>
-            </div>
-            <div class="form-group">
-            <%= label 'Job Title: ' %>
-            <%= @user.profile.job_title, class: 'form-control' %><br/>
-            </div>
-            <% if current_user.plan_id === 2 %>
-                <div class="form-group">
-                <%= label 'Phone Number: ' %>
-                <%= @user.profile.phone_number, class: 'form-control' %><br/>
-                </div>
-                <div class="form-group">
-                <%= label 'Email: ' %>
-                <%= @user.profile.contact_email, class: 'form-control' %><br/>
-                </div>
-            <% end %>
-            <div class="form-group">
-            <%= label 'Description: ' %>
-            <%= @user.profile.description, class: 'form-control' %><br/>   
-            </div>
-        </div>
-    </div>
-</div>
+
+    <%= @user.profile.first_name.capitalize %></br>
+    <%= @user.profile.last_name.capitalize %><br/>
+    <%= @user.profile.job_title %><br/>
+    <% if current_user.plan_id === 2 %>
+        <%= @user.profile.phone_number %><br/>
+        <%= @user.profile.contact_email%><br/>
+    <% end %>
+    <%= @user.profile.description %><br/>   
