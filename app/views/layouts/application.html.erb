@@ -39,14 +39,13 @@
     </div><!-- /.navbar-collapse -->
   </div>
 </nav>
-
+<div class="container">
 <%= yield %>
-
+</div>
 <div class="container">
   <% flash.each do |key, value| %>
     <%= content_tag :div, value, class: "alert alert-#{key}" %>
   <% end %>
-  
 </div>
 </body>
 </html>
